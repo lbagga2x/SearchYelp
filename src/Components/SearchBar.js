@@ -2,11 +2,20 @@ import React from "react";
 import { View, Text, StyleSheet, TextInput } from "react-native";
 import { FontAwesome } from "@expo/vector-icons";
 
-const SearchBar = () => {
+const SearchBar = ({ value, onChangeText, onEndEditing }) => {
   return (
-    <View style={styles.backgroundView}>
-      <FontAwesome name="search" size={20} style={{ alignSelf: "center" }} />
-      <TextInput style={styles.textInput} placeholder="Search Business" />
+    <View>
+      <View style={styles.backgroundView}>
+        <FontAwesome name="search" size={20} style={{ alignSelf: "center" }} />
+        <TextInput
+          style={styles.textInput}
+          placeholder="Search Business"
+          onChangeText={(text) => onChangeText(text)}
+          value={value}
+          returnKeyType="done"
+          onEndEditing={() => onEndEditing()}
+        />
+      </View>
     </View>
   );
 };
