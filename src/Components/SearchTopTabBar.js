@@ -29,24 +29,15 @@ const SearchTopTabBar = () => {
 
   return (
     <View style={style.baseStyle}>
-      <TouchableOpacity
-        style={{ flex: 1, height: 60 }}
-        onPress={() => onPressButton(1)}
-      >
+      <TouchableOpacity style={{ flex: 1 }} onPress={() => onPressButton(1)}>
         <SearchTab name="All" showView={firstTab} />
       </TouchableOpacity>
 
-      <TouchableOpacity
-        style={{ flex: 1, height: 60 }}
-        onPress={() => onPressButton(2)}
-      >
+      <TouchableOpacity style={{ flex: 1 }} onPress={() => onPressButton(2)}>
         <SearchTab name="People" showView={secondTab} />
       </TouchableOpacity>
 
-      <TouchableOpacity
-        style={{ flex: 1, height: 60 }}
-        onPress={() => onPressButton(3)}
-      >
+      <TouchableOpacity style={{ flex: 1 }} onPress={() => onPressButton(3)}>
         <SearchTab name="Business" showView={thirdTab} />
       </TouchableOpacity>
     </View>
@@ -56,8 +47,8 @@ const SearchTopTabBar = () => {
 const style = StyleSheet.create({
   baseStyle: {
     flexDirection: "row",
-    flex: 1,
     backgroundColor: "#FFFFF8",
+    height: 60,
   },
 });
 
